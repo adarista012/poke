@@ -3,7 +3,7 @@ import { Header, Item , List, Wrapper} from './styles'
 
 
 const Pokemon = ({ pokemon }) => {
-  console.log(pokemon.url.split('/').filter(x => x).pop())
+  //console.log(pokemon.url.split('/').filter(x => x).pop())
   const id = pokemon.url.split('/').filter(x => x).pop()
   return (
     //<link>
@@ -14,7 +14,7 @@ const Pokemon = ({ pokemon }) => {
 }
 
 export default function Pokemones({ pokemones }) {
-  console.log(pokemones)
+  //console.log(pokemones)
   return (
     
     <Wrapper>

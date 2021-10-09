@@ -6,7 +6,7 @@ import { WrapperPoke } from '../styles'
 
 const Pokemon = ({ data }) => {
     const router = useRouter()
-    console.log(router)
+    //console.log(router)
     // if (router.isFallback){
     //     return <p>Cargando...</p>
     // }
