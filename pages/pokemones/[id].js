@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { WrapperPoke } from '../styles'
 
 const Pokemon = ({ data }) => {
     const router = useRouter()
@@ -10,14 +11,11 @@ const Pokemon = ({ data }) => {
     //     return <p>Cargando...</p>
     // }
     return (
-        <div>
-            <h1>
+        <WrapperPoke>
             {data.name} número #{data.id}
-            </h1>
             <Image src={data.sprites.front_default} width={400} height={400} />
             <Link href='/'>Volver al inicio</Link>
-            
-        </div>
+        </WrapperPoke>
     )
 }
 

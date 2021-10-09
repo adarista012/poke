@@ -1,24 +1,36 @@
 import Link from 'next/link'
+import { Header, Item , List, Wrapper} from './styles'
+
 
 const Pokemon = ({ pokemon }) => {
   console.log(pokemon.url.split('/').filter(x => x).pop())
   const id = pokemon.url.split('/').filter(x => x).pop()
   return (
     //<link>
-      <li><Link href={`/pokemones/${id}`}>{pokemon.name}</Link></li>
+      <Item><Link href={`/pokemones/${id}`}>{pokemon.name}</Link></Item>
     //</link>
     
   )
 }
+
 export default function Pokemones({ pokemones }) {
   console.log(pokemones)
   return (
-    <div>
-      <p>Mi App de Pokemones</p>
-      <ul>
-        {pokemones.map(pokemon => <Pokemon pokemon={pokemon} key={pokemon.name} />)}
-      </ul>
-    </div>
+    
+    <Wrapper>
+      <Header>Mi App de Pokemones</Header>
+      <List>
+         {pokemones.map(pokemon => <Pokemon pokemon={pokemon} key={pokemon.name} />)}
+      </List>
+    </Wrapper>
+  
+    // <section>
+    //   <Header>Mi App de Pokemones</Header>
+    //   <p>Mi App de Pokemones</p>
+    //   <ul>
+    //     {pokemones.map(pokemon => <Pokemon pokemon={pokemon} key={pokemon.name} />)}
+    //   </ul>
+    // </section>
     
   )
 }
