@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Header, Item , List, Wrapper} from './styles'
+import { Header, Item , List, Wrapper} from '../styles/styles'
 
 
 const Pokemon = ({ pokemon }) => {

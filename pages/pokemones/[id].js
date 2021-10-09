@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { WrapperPoke } from '../styles'
+import { WrapperPoke } from '../../styles/styles'
 
 const Pokemon = ({ data }) => {
     const router = useRouter()
